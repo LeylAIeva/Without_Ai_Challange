@@ -10,23 +10,28 @@ choosen_word.append(data[i]["word"])
 choosen_word = str(choosen_word)
 
 print(choosen_word)
-add_word = list(input("Add word:  "))
-true_letters=[add_word[x].upper() if add_word[x] in choosen_word else add_word[x] for x in range(len(add_word)) ]
 
-print(true_letters)
-str_true_letters ="".join(true_letters).lower()
+check = []
+
 while point>0:
-    
-        
-        if str_true_letters.lower() == choosen_word:
+        add_word = list(input("Add word:  "))
+        true_letters=[add_word[x].upper() if add_word[x] in choosen_word else add_word[x] for x in range(len(add_word)) ]
+        print(true_letters)
+        str_true_letters="".join(true_letters).lower()
+        check.append(str_true_letters)
+        if check == choosen_word:
               print("Congrats")
               break
+        
         else:
-              add_word = list(input("Add word:  "))
+              
+              
               point-=1
               
         print(point)
-        print(str_true_letters)
+        print(check)
+        print(choosen_word)
+       
         
         
               
