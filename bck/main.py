@@ -17,7 +17,7 @@ while point>0:
         add_word = list(input("Add word:  "))
         mod_word="".join(add_word).lower()
         true_letters=[add_word[x].upper() if add_word[x] in choosen_word else add_word[x] for x in range(len(add_word)) ]
-        print(f"true letters {true_letters}")
+        
         str_true_letters="".join(true_letters).lower()
         
         print(f"str true letters{str_true_letters}")
@@ -29,15 +29,15 @@ while point>0:
               
               
               point-=1
-              check=[]
+              
               
         print(point)
-        print(f"check {check}")
+        
         print(f"choosen_word {choosen_word}")
-        print(f"add_word{add_word}")
+        
         print(f"mod word {mod_word}")
         
-       
+        print(f"true letters {true_letters}")
         
         
 
