@@ -53,8 +53,14 @@ while point>0:
 
             else:
                   for key in true_letters:
-                        if true_letters[key]==True:
-                              pass
+                        if key not in origin_dict:
+                              print("try again")
+                        elif true_letters[key]==origin_dict[key]:
+                              print("perfect")
+                        else:
+                              print("switch")
+                        
+
                   point-=1
         else: 
               print("oh no")
