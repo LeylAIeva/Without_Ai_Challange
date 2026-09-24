@@ -7,12 +7,13 @@ with open("bck/words.json","r") as file:
     data = json.load(file)
 i = random.randrange(1,4)
 choosen_word.append(data[i]["word"])
-choosen_word = str(choosen_word)
+choosen_word_str = choosen_word[0]
 
 print(choosen_word)
 
 
-count = len(choosen_word)
+"""count = len(choosen_word_str)"""
+print(count)
 while point>0:
         
         add_word = list(input("Add word:  "))
@@ -22,10 +23,10 @@ while point>0:
         """str_true_letters="".join(true_letters).lower() unnecessary"""
         
         
-        
+      
         if len(mod_word) == count:
               
-            if mod_word in choosen_word:
+            if mod_word in choosen_word_str:
                   print("Congrats")
                   break
 
@@ -33,18 +34,20 @@ while point>0:
 
 
                   point-=1
-        else:
-              raise ValueError(f"it must be {count}")
+        else: 
+              print("oh no")
+
+              
               
         print(point)
         
-        print(f"choosen_word {choosen_word}")
+        """print(f"choosen_word {choosen_word}")
         
-        print(f"mod word {type(mod_word)}")
+        print(f"mod word {mod_word}")
         
         print(f"true letters {true_letters}")
-      
-        
+        print(count)
+        """
         
 
 
