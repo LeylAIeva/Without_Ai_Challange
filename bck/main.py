@@ -24,14 +24,15 @@ print(choosen_word)
 
 
 count = len(choosen_word_str)
-"""print(count)"""
+
 true_letters = {}
 value_of_tl=0
+place=True
 while point>0:
         
         add_word = list(input("Add word:  "))
         mod_word="".join(add_word).lower()
-        """true_letters={add_word[x]:True if add_word[x] in choosen_word_str else add_word[x] for x in range(len(add_word)) }"""
+        
 
         for  letters in add_word:
             value_of_tl+=1
@@ -57,8 +58,12 @@ while point>0:
                               print("try again")
                         elif true_letters[key]==origin_dict[key]:
                               print("perfect")
+                              place=True
+                              print(place)
                         else:
                               print("switch")
+                              place=False
+                              print(place)
                         
 
                   point-=1
