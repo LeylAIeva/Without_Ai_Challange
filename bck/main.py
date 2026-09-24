@@ -11,13 +11,11 @@ choosen_word_str = choosen_word[0]
 origin_dict={}
 value_of_letter=0
 for  letter in choosen_word_str:
-      if origin_dict is None:
-            origin_dict.update({letter:0})
-            
-      else:
-            value_of_letter+=1
-            
-            origin_dict.update({letter:value_of_letter})
+      value_of_letter+=1
+      if letter not in origin_dict:
+            origin_dict[letter]=[]         
+
+      origin_dict[letter].append(value_of_letter)
             
 print(origin_dict)
 
@@ -27,12 +25,20 @@ print(choosen_word)
 
 count = len(choosen_word_str)
 """print(count)"""
+true_letters = {}
+value_of_tl=0
 while point>0:
         
         add_word = list(input("Add word:  "))
         mod_word="".join(add_word).lower()
-        true_letters={add_word[x]:True if add_word[x] in choosen_word_str else add_word[x] for x in range(len(add_word)) }
-        
+        """true_letters={add_word[x]:True if add_word[x] in choosen_word_str else add_word[x] for x in range(len(add_word)) }"""
+
+        for  letters in add_word:
+            value_of_tl+=1
+            if letters not in true_letters:
+                  true_letters[letters]=[]         
+
+            true_letters[letters].append(value_of_tl)
         
         
                     
