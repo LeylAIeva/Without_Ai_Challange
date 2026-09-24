@@ -12,15 +12,17 @@ choosen_word_str = choosen_word[0]
 print(choosen_word)
 
 
-"""count = len(choosen_word_str)"""
-print(count)
+count = len(choosen_word_str)
+"""print(count)"""
 while point>0:
         
         add_word = list(input("Add word:  "))
         mod_word="".join(add_word).lower()
-        true_letters=[add_word[x].upper() if add_word[x] in choosen_word else add_word[x] for x in range(len(add_word)) ]
+        true_letters={add_word[x]:True if add_word[x] in choosen_word_str else add_word[x] for x in range(len(add_word)) }
         
-        """str_true_letters="".join(true_letters).lower() unnecessary"""
+        
+        
+                    
         
         
       
@@ -40,12 +42,12 @@ while point>0:
               
               
         print(point)
-        
+        print(f"true letters {true_letters}")
         """print(f"choosen_word {choosen_word}")
         
         print(f"mod word {mod_word}")
         
-        print(f"true letters {true_letters}")
+        
         print(count)
         """
         
