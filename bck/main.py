@@ -8,6 +8,19 @@ with open("bck/words.json","r") as file:
 i = random.randrange(1,4)
 choosen_word.append(data[i]["word"])
 choosen_word_str = choosen_word[0]
+origin_dict={}
+value_of_letter=0
+for  letter in choosen_word_str:
+      if origin_dict is None:
+            origin_dict.update({letter:0})
+            
+      else:
+            value_of_letter+=1
+            
+            origin_dict.update({letter:value_of_letter})
+            
+print(origin_dict)
+
 
 print(choosen_word)
 
@@ -33,8 +46,9 @@ while point>0:
                   break
 
             else:
-
-
+                  for key in true_letters:
+                        if true_letters[key]==True:
+                              pass
                   point-=1
         else: 
               print("oh no")
